@@ -1,0 +1,3 @@
+SAMBA_DIR=${SAMBA_DIR:="netshare"}
+SAMBA_USER=${SAMBA_USER:="startsamba"}
+SAMBA_PW=${SAMBA_PW:="startsamba"}

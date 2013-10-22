@@ -1,0 +1,20 @@
+#! /usr/bin/expect
+
+
+## password information
+## you can change the password what you want
+set password startsamba
+set sambauser startsamba
+
+## auto password setup
+spawn bash -c "smbpasswd -a $sambauser"
+expect -re "New SMB password:"
+send "$password\r"
+expect -re "Retype new SMB password:"
+send "$password\r"
+interact
+
+
+## finish the auto password insert
+puts "samba user name is $sambauser, password is $password"
+
