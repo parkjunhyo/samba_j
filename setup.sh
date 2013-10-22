@@ -13,6 +13,7 @@ fi
 sed -i 's/set password [[:alnum:]]*/set password '$SAMBA_PW'/' $(pwd)/insert_smb_pass.exp
 sed -i 's/set sambauser [[:alnum:]]*/set sambauser '$SAMBA_USER'/' $(pwd)/insert_smb_pass.exp
 $(find / -wholename "$(pwd)/insert_smb_pass.exp")
+smbpasswd -e $SAMBA_USER
 
 #### create the share folder
 if [[ ! -d /$SAMBA_DIR ]]
