@@ -25,7 +25,7 @@ fi
 #### configuration for samba.conf file
 smb_config="/etc/samba/smb.conf"
 echo "[ $SAMBA_DIR ]" >> $smb_config
-echo "   comment = $SAMBA_DIR Directory" >> $smb_config
+echo "   comment = $SAMBA_USER Directory" >> $smb_config
 echo "   path = /$SAMBA_DIR" >> $smb_config
 echo "   guest ok = yes" >> $smb_config
 echo "   browseable = yes" >> $smb_config
